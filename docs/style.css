@@ -1,0 +1,15 @@
+.fa-heart:hover {
+    color: red;
+}
+
+.true {
+    color: red;
+}
+
+.fa-retweet:hover {
+    color: rgb(70, 247, 70)
+}
+
+.fa-reply:hover {
+    color: lightskyblue
+}
