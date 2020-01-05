@@ -10,11 +10,6 @@ export const renderHome = function() {
 
 export async function homeTweets() {
     const $root = $('#root');
-    // const result = await axios({
-    //     method: 'get',
-    //     url: 'https://comp426fa19.cs.unc.edu/a09/tweets',
-    //     withCredentials: true,
-    // });
 
     $root.empty();
     for (let i = 0; i < 1; i++) {
@@ -92,24 +87,12 @@ export function cancelDraft() {
 }
 
 export async function postTweet() {
-  let text = $("textarea").val();
-  // await axios({
-  //   method: 'post',
-  //   url: 'https://comp426fa19.cs.unc.edu/a09/tweets',
-  //   data: {
-  //     "type": "tweet",
-  //     "body": text,
-  //   },
-  //   withCredentials: true,
-  // });
-  
   cancelDraft();
   renderHome();
 
 }
 
 export function edit(event){
-  // let data = event.target.getAttribute("data-text");
   $(`.edit`).replaceWith(`
   <div class= "draft" style = "position: relative;">
   <textarea class="edittext textarea is-large">Example editable/deletable tweet</textarea>
@@ -118,22 +101,12 @@ export function edit(event){
   </div>`);
   
   $(`.canceledit`).on("click", cancelEdit);
-  // $(`.submitedit${event.currentTarget.value}`).on("click", postEdit);
 
 
 
 }
 
 export async function postEdit(event) {
-  let draft = $(`.edittext${event.currentTarget.value}`).val();
-  // await axios({
-  //   method: 'put',
-  //   url: 'https://comp426fa19.cs.unc.edu/a09/tweets/' + event.currentTarget.value,
-  //   withCredentials: true,
-  //   data: {
-  //     "body": draft,
-  //   },
-  // });
   renderHome();
 }
 
@@ -144,28 +117,13 @@ export function cancelEdit(event) {
 }
 
 export async function deleteTweet(event) {
-  // await axios({
-  //   method: 'delete',
-  //   url: 'https://comp426fa19.cs.unc.edu/a09/tweets/' + event.currentTarget.value,
-  //   withCredentials: true,
-  // });
   renderHome();
 }
 
 export async function likeTweet(event) {
  if ($(`#${event.currentTarget.id}`).hasClass("false")) {
-  // await axios({
-  //   method: 'put',
-  //   url: 'https://comp426fa19.cs.unc.edu/a09/tweets/' + event.currentTarget.id + '/like',
-  //   withCredentials: true,
-  // });     
   renderHome();
  } else if ($(`#${event.currentTarget.id}`).hasClass("true")) {
-  // await axios({
-  //   method: 'put',
-  //   url: 'https://comp426fa19.cs.unc.edu/a09/tweets/' + event.currentTarget.id + '/unlike',
-  //   withCredentials: true,
-  // });     
   renderHome();
   }
 }
@@ -190,28 +148,6 @@ $(".reply").on("click", replyDraft);
 }
 
 export async function postReply(event) {
-  let author = event.target.getAttribute("author");
-  let data = $(`.replytext${event.target.getAttribute("data-id")}`).val();
-  // await axios({
-  //   method: 'post',
-  //   url: 'https://comp426fa19.cs.unc.edu/a09/tweets',
-  //   withCredentials: true,
-  //   data: {
-  //     "type": "reply",
-  //     "parent": event.target.getAttribute("data-id"),
-  //     "body": data
-  //   },
-  // });
-
-  // await axios({
-  //   method: 'post',
-  //   url: 'https://comp426fa19.cs.unc.edu/a09/tweets',
-  //   withCredentials: true,
-  //   data: {
-  //     "body": "Reply to " + author + ": " + data
-  //   },
-  // });
-  
   renderHome();
 
 }
@@ -237,27 +173,6 @@ $(".retweet").on("click", retweetDraft);
 }
 
 export async function postRetweet(event) {
-  // const parent = await axios({
-  //   method: "get",
-  //   url: 'https://comp426fa19.cs.unc.edu/a09/tweets/' + event.target.getAttribute("data-id"),
-  //   withCredentials: true,
-  // });
-
-  // let retweetbody = parent.data["body"];
-
-  // let retweettext = $(`.retweettext${event.target.getAttribute("data-id")}`).val();
-  // await axios({
-  //   method: 'post',
-  //   url: 'https://comp426fa19.cs.unc.edu/a09/tweets',
-  //   withCredentials: true,
-  //   data: {
-  //     "type": "retweet",
-  //     "parent": event.target.getAttribute("data-id"),
-  //     "body":
-  //     `${retweettext}<br><br><div><h3>Retweeted from @${event.target.getAttribute("author")}:</h3><p>${retweetbody}</p></div>`
-  //   },
-  // });
-
   renderHome();
 
 
