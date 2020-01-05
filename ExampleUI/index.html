@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Home Page</title>
+
+        <!-- Include links to CSS stylesheets below -->
+        <link rel="stylesheet" href = "bulma/css/bulma.css"></link>
+        <link rel="stylesheet" href = "style.css"></link>
+        <link rel="stylesheet" href = "@fortawesome/fontawesome-free/css/all.css"></link>
+    </head>
+
+    <body>
+            <section class="hero is-primary has-background-info">
+                    <div class="hero-body">
+                      <div class="container">
+                        <h1 class="title">
+                                <i class="fab fa-twitter"></i>  COMP 426 Twitter 
+                        </h1>
+                        <h2 class="subtitle">
+                          By Shayan Dolikhani
+                        </h2>
+                      </div>
+                    </div>
+                  </section>
+        
+        <div class = "columns is-centered">
+          <div class = "column is-half">
+            <div class = "bd-notification is-primary">
+          <div id = "root"> </div>
+          </div>
+          </div>
+        </div>
+
+
+        <div style="position:fixed;bottom:3%;right:3%;"><button class = "post button is-large is-rounded has-background-info">
+           <span style="color:white;"><i class="fas fa-pen"></i></span> 
+        </button></div>
+       
+        <!-- Include links to JavaScript files below -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="module" src="render.js"></script>
+        <!-- <script src ="../node_modules/axios/dist/axios.js"></script> -->
+    </body>
+</html>
