@@ -10,6 +10,6 @@ A class-wide interactive Twitter-style news feed web app that displays a list of
 7. PUT     https://comp426fa19.cs.unc.edu/a09/tweets/:id/unlike :  Unlikes a specific Tweet
 
 
-Unfortunately since the backend was provided specifically for the purposes of the course, sending HTTP requests to the backend will no longer work, however, if you wish to take a look at the UI for the app, you can visit the link below. Refresh the page if tweets are not showing up.
+Unfortunately since the backend was provided specifically for the purposes of the course, sending HTTP requests to the backend will no longer work, however, if you wish to take a look at the UI for the app, you can visit the link below.
 
 # https://shayandolikhani.github.io/Comp-426-twitter/
